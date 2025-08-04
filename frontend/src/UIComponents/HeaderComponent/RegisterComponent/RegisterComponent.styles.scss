@@ -1,0 +1,65 @@
+@use './RegisterComponent.variables.scss' as vars;
+
+.register-component-wrapper-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: vars.$register-component-wrapper-overlay-width;
+    height: vars.$register-component-wrapper-overlay-height;
+    backdrop-filter: blur(8px);
+    background: vars.$register-component-wrapper-overlay-background;
+    z-index: 999;
+    pointer-events: auto;
+
+    .register-component-wrapper {
+        width: vars.$register-component-wrapper-width;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: vars.$register-component-wrapper-padding;
+        background-color: vars.$register-component-wrapper-background;
+        border-radius: vars.$register-component-wrapper-border-radius;
+
+        .register-title {
+            margin: vars.$register-component-title-margin;
+        }
+
+        #register-form {
+            input {
+                margin: vars.$register-component-form-input-margin;
+                padding: vars.$register-component-form-input-padding;
+                color: vars.$register-component-form-input-color;
+                font-size: vars.$register-component-form-input-font-size;
+                border: vars.$register-component-form-input-border;
+                border-radius: vars.$register-component-form-input-border-radius;
+            }
+
+            button {
+                display: flex;
+                background-color: vars.$register-component-form-button-background;
+                color: vars.$register-component-form-button-color;
+                margin: vars.$register-component-form-button-margin;
+            }
+        }
+
+        .close-btn {
+            background-color: transparent;
+            width: vars.$register-component-form-close-button-width;
+            height: vars.$register-component-form-close-button-height;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        #register-message {
+            position: absolute;
+            bottom: 15px;
+            font-weight: vars.$register-component-form-message-font-weight;
+        }
+    }
+}

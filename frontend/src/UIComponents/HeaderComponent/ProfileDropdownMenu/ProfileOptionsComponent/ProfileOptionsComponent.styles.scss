@@ -1,0 +1,109 @@
+@use './ProfileOptionsComponent.variables.scss' as vars;
+
+.profile-options-wrapper-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: vars.$profile-options-wrapper-overlay-width;
+    height: vars.$profile-options-wrapper-overlay-width;
+    backdrop-filter: blur(8px);
+    background: vars.$profile-options-wrapper-overlay-background;
+    z-index: 999;
+    pointer-events: auto;
+
+    .profile-options-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: vars.$profile-options-wrapper-padding;
+        background-color: vars.$profile-options-wrapper-background;
+        border-radius: vars.$profile-options-wrapper-border-radius;
+
+        .profile-options-title {
+            margin: vars.$profile-options-title-margin;
+        }
+
+        .profile-avatar-and-data {
+            display: flex;
+            flex-direction: column;
+
+            .profile-avatar-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-bottom: vars.$profile-options-wrapper-border;
+
+                input {
+                    margin: vars.$profile-options-wrapper-input-margin;
+                }
+
+                img {
+                    width: vars.$profile-options-wrapper-avatar-img-width;
+                    height: vars.$profile-options-wrapper-avatar-img-width;
+                    border-radius: vars.$profile-options-wrapper-avatar-img-border-radius;
+                }
+
+                button {
+                    background-color: vars.$profile-options-wrapper-upload-button-background;
+                    color: vars.$profile-options-wrapper-upload-button-color;
+                    margin: vars.$profile-options-wrapper-upload-button-margin;
+                }
+            }
+        }
+
+        .profile-personal-data-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 20px;
+
+            .user-names {
+                display: flex;
+                flex-direction: column;
+
+                .first-name-label,
+                .last-name-label {
+                    font-size: vars.$profile-options-wrapper-labels-font-size;
+                }
+
+                .first-name-value,
+                .last-name-value {
+                    color: vars.$profile-options-wrapper-labels-color;
+                }
+            }
+
+            .user-email,
+            .user-occupation {
+
+                .email-label,
+                .occupation-label {
+                    font-size: vars.$profile-options-wrapper-labels-font-size;
+                }
+
+                .email-value,
+                .occupation-value {
+                    color: vars.$profile-options-wrapper-labels-color;
+                }
+
+                .occupation-value {
+                    font-size: vars.$profile-options-wrapper-occupation-input-font-size;
+                    border: vars.$profile-options-wrapper-occupation-input-border;
+                    border-radius: vars.$profile-options-wrapper-occupation-input-border-radius;
+                }
+            }
+        }
+
+        .close-btn {
+            background-color: transparent;
+            width: vars.$profile-options-wrapper-close-button-width;
+            height: vars.$profile-options-wrapper-close-button-height;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

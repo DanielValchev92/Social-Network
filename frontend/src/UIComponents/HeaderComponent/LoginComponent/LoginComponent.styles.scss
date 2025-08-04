@@ -1,0 +1,65 @@
+@use './LoginComponent.variables.scss' as vars;
+
+.login-component-wrapper-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: vars.$login-component-wrapper-overlay-width;
+    height: vars.$login-component-wrapper-overlay-height;
+    backdrop-filter: blur(8px);
+    background: vars.$login-component-wrapper-overlay-background;
+    z-index: 999;
+    pointer-events: auto;
+
+    .login-component-wrapper {
+        width: vars.$login-component-wrapper-width;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: vars.$login-component-wrapper-padding;
+        background-color: vars.$login-component-wrapper-background;
+        border-radius: vars.$login-component-wrapper-border-radius;
+
+        .login-title {
+            margin: vars.$login-title-margin;
+        }
+
+        #login-form {
+            input {
+                margin: vars.$login-component-form-input-margin;
+                padding: vars.$login-component-form-input-padding;
+                color: vars.$login-component-form-input-color;
+                font-size: vars.$login-component-form-input-font-size;
+                border: vars.$login-component-form-input-border;
+                border-radius: vars.$login-component-form-input-border-radius;
+            }
+
+            button {
+                display: flex;
+                background-color: vars.$login-component-form-button-background;
+                color: vars.$login-component-form-button-color;
+                margin: vars.$login-component-form-button-margin;
+            }
+        }
+
+        .close-btn {
+            background-color: transparent;
+            width: vars.$login-component-form-close-button-width;
+            height: vars.$login-component-form-close-button-height;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        #login-message {
+            position: absolute;
+            bottom: 15px;
+            font-weight: vars.$login-component-form-message-font-weight;
+        }
+    }
+}

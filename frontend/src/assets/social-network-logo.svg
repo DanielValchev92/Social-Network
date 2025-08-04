@@ -1,0 +1,7 @@
+
+<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="10" width="60" height="60" rx="12" fill="#123C39"/>
+  <text x="15" y="50" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="white">SN</text>
+  <text x="75" y="42" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#F0F0F0">social</text>
+  <text x="75" y="65" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#F0F0F0">network</text>
+</svg>

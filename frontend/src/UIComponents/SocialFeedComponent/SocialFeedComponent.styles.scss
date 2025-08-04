@@ -1,0 +1,14 @@
+@use './SocialFeedComponent.variables.scss' as vars;
+
+.social-network-feed-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: vars.$social-feed-wrapper-padding;
+}
+
+@media (max-width: 768px) {
+    .social-network-feed-wrapper {
+        flex-direction: column;
+        padding: vars.$mobile-social-feed-wrapper-padding;
+    }
+}

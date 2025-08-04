@@ -1,0 +1,14 @@
+@use './FooterComponent.variables.scss' as vars;
+
+.footer-wrapper {
+    background-color: vars.$footer-wrapper-background;
+    padding: vars.$footer-wrapper-padding;
+
+    p {
+        color: vars.$footer-wrapper-text-color;
+        margin: vars.$footer-wrapper-text-margin;
+        font-size: vars.$footer-wrapper-text-font-size;
+        line-height: vars.$footer-wrapper-text-line-height;
+        font-weight: vars.$footer-wrapper-text-font-weight;
+    }
+}

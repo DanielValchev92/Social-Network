@@ -1,0 +1,134 @@
+@use './HeaderComponent.variables' as vars;
+
+.header-wrapper-overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        background-color: vars.$header-wrapper-background-color;
+        padding: vars.$header-wrapper-padding;
+
+        .logo-wrapper {
+            img {
+                height: vars.$header-logo-img-height;
+            }
+        }
+
+        .profile-wrapper {
+            display: flex;
+            align-items: center;
+
+            .login-register-section {
+                position: relative;
+
+                .profile-icon {
+                    width: vars.$header-profile-icon-width;
+                    height: vars.$header-profile-icon-height;
+                }
+
+                .register-button {
+                    background-color: vars.$header-register-button-background-color;
+                    color: vars.$header-register-button-color;
+                    border: vars.$header-register-button-border;
+                    margin-right: 8px;
+
+                    &:hover {
+                        background-color: transparent;
+                        border-color: vars.$header-register-button-hover-border-color
+                    }
+                }
+
+                .login-button {
+                    background-color: vars.$header-login-button-background-color;
+                    color: vars.$header-login-button-color;
+
+                    &:hover {
+                        background-color: vars.$header-login-button-hover-color;
+                    }
+                }
+
+                .loggedin-profile-wrapper {
+                    display: flex;
+                    align-items: center;
+
+                    .personal-data-wrapper {
+                        font-size: vars.$header-personal-data-wrapper-font-size;
+                        margin-right: 10px;
+                        color: vars.$header-personal-data-wrapper-color;
+                        font-weight: vars.$header-personal-data-wrapper-font-weight;
+
+
+                        .engagement-wrapper {
+                            display: flex;
+                            justify-content: space-between;
+                            color: vars.$header-engagement-wrapper-color;
+
+                            .likes-wrapper {
+                                margin-right: 5px;
+                            }
+
+                            .count {
+                                margin-right: 2px;
+                            }
+                        }
+                    }
+
+                }
+
+                img {
+                    cursor: pointer;
+                }
+
+                .profile-dropdown-menu-wrapper {
+                    position: absolute;
+                    background: vars.$header-profile-dropdown-menu-background;
+                    color: vars.$header-profile-dropdown-menu-color;
+                    border-radius: vars.$header-profile-dropdown-menu-border-radius;
+                    right: 0;
+                    top: 60px;
+                    width: vars.$header-profile-dropdown-menu-width;
+                    box-shadow: vars.$header-profile-dropdown-menu-box-shadow;
+
+                    .my-profile-options,
+                    .logout {
+                        cursor: pointer;
+                        padding: vars.$header-profile-dropdown-menu-elements-padding;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header-wrapper-overlay {
+        .header-wrapper {
+            align-items: center;
+
+            .logo-wrapper {
+                img {
+                    height: vars.$mobile-header-logo-img-height;
+                }
+            }
+
+            .profile-wrapper {
+                .login-register-section {
+                    .loggedin-profile-wrapper {
+                        .profile-icon {
+                            width: vars.$mobile-header-profile-icon-width;
+                            height: vars.$mobile-header-profile-icon-height;
+                        }
+                    }
+
+                    .profile-dropdown-menu-wrapper {
+                        top: 35px;
+                    }
+                }
+            }
+        }
+    }
+}

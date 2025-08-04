@@ -1,0 +1,25 @@
+$post-single-feed-wrapper-width: 600px;
+$post-single-feed-wrapper-background: linear-gradient(135deg, #7f5af0 0%, #2cb67d 100%);
+$post-single-feed-wrapper-border-radius: 6px;
+
+$post-single-feed-message-input-height: 80px;
+$post-single-feed-message-input-padding: 0 0 0 32px;
+$post-single-feed-message-input-color: #212529;
+$post-single-feed-message-input-font-size: 16px;
+$post-single-feed-message-input-font-weight: 400;
+$post-single-feed-message-input-border: none;
+$post-single-feed-message-input-width: calc(100% - 32px);
+
+$button-and-message-wrapper-padding: 4px 12px;
+$button-and-message-wrapper-border-top: 1px solid rgba(255, 255, 255, 0.2);
+$button-and-message-wrapper-border-radius: 0 0 6px 6px;
+
+$post-button-padding: 8px 16px;
+$post-button-font-size: 14px;
+$post-button-background: #7f5af0;
+$post-button-color: #E0E0E0;
+$post-button-border-radius: 6px;
+$post-button-disabled-background: gray;
+
+$message-warning-color: #E0E0E0;
+$message-warning-font-weight: 700;

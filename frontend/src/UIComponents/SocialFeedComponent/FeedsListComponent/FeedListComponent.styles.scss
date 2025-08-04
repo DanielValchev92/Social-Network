@@ -1,0 +1,125 @@
+@use './FeedsListComponent.variables.scss' as vars;
+
+.messages-list-wrapper {
+    .message-wrapper {
+        margin: vars.$message-wrapper-margin;
+        background: vars.$message-wrapper-background;
+        border-radius: vars.$message-wrapper-border-radius;
+        max-width: vars.$message-wrapper-max-width;
+
+        .user-profile-section {
+            display: flex;
+            justify-content: space-between;
+            padding: vars.$user-profile-section-padding;
+
+            .user-data-wrapper {
+                display: flex;
+                align-items: center;
+
+                .profile-avatar {
+                    width: vars.$user-profile-section-avatar-width;
+                    height: vars.$user-profile-section-avatar-height;
+                    margin-right: 10px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .user-personal-data {
+                    .user-names {
+                        font-size: vars.$user-names-font-size;
+                        line-height: vars.$user-names-line-height;
+                        color: vars.$user-names-color;
+                        font-weight: vars.$user-names-font-weight;
+                    }
+
+                    .user-occupation {
+                        font-size: vars.$user-occupation-font-size;
+                        line-height: vars.$user-occupation-line-height;
+                        font-weight: vars.$user-occupation-font-weight;
+                        color: vars.$user-occupation-color;
+                    }
+                }
+            }
+
+            .timestamp {
+                font-size: vars.$timestamp-font-size;
+                color: vars.$timestamp-color;
+                line-height: vars.$timestamp-line-height;
+                font-weight: vars.$timestamp-font-weight;
+            }
+        }
+
+        .message-content {
+            display: flex;
+            flex-direction: column;
+            font-size: vars.$message-content-font-size;
+            color: vars.$message-content-color;
+            font-weight: vars.$message-content-font-weight;
+            line-height: vars.$message-content-line-height;
+            padding: vars.$message-content-padding;
+
+            .see-more-less-button {
+                display: flex;
+                justify-content: right;
+                background: vars.$message-see-more-less-button-background;
+                border: vars.$message-see-more-less-button-border;
+                color: vars.$message-see-more-less-button-color;
+                cursor: pointer;
+                font-size: vars.$message-see-more-less-button-font-size;
+                line-height: vars.$message-see-more-less-button-line-height;
+                font-weight: vars.$message-see-more-less-button-font-weight;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .likes-count-wrapper {
+            display: flex;
+            align-items: center;
+            padding: vars.$likes-count-wrapper-padding;
+
+            img {
+                width: vars.$likes-count-wrapper-img-width;
+                height: vars.$likes-count-wrapper-img-height;
+                margin-right: 5px;
+            }
+
+            span {
+                font-size: vars.$likes-count-wrapper-span-font-size;
+                line-height: vars.$likes-count-wrapper-span-line-height;
+                color: vars.$likes-count-wrapper-span-color;
+            }
+        }
+
+        .engagement-buttons-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: vars.$engagement-buttons-wrapper-padding;
+            border-top: vars.$engagement-buttons-wrapper-border-top;
+            position: relative;
+
+            .like-button,
+            .share-button {
+                cursor: pointer;
+            }
+
+            .like-button-active {
+                cursor: pointer;
+                width: vars.$like-button-active-width;
+                height: vars.$like-button-active-height;
+            }
+
+            .share-message-text {
+                position: absolute;
+                bottom: 10px;
+                left: 35%;
+                margin: vars.$share-message-text-margin;
+                color: vars.$share-message-text-color;
+            }
+        }
+    }
+}

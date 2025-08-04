@@ -1,0 +1,53 @@
+@use './PostSingleFeed.variables.scss' as vars;
+
+.post-single-feed-wrapper {
+    width: vars.$post-single-feed-wrapper-width;
+    background: vars.$post-single-feed-wrapper-background; 
+    border-radius: vars.$post-single-feed-wrapper-border-radius;
+    .message-input {
+        height: vars.$post-single-feed-message-input-height;
+        padding: vars.$post-single-feed-message-input-padding;
+        color: vars.$post-single-feed-message-input-color;
+        font-size: vars.$post-single-feed-message-input-font-size;
+        font-weight: vars.$post-single-feed-message-input-font-weight;
+        border: vars.$post-single-feed-message-input-border;
+        width: vars.$post-single-feed-message-input-width;
+    }
+    .button-and-message-wrapper {
+        position: relative;
+        padding: vars.$button-and-message-wrapper-padding;
+        border-top: vars.$button-and-message-wrapper-border-top;
+        border-radius: vars.$button-and-message-wrapper-border-radius;
+        button {
+            padding: vars.$post-button-padding;
+            display: flex;
+            font-size: vars.$post-button-font-size;
+            background: vars.$post-button-background;
+            color: vars.$post-button-color;
+            margin-left: auto;
+            border-radius: vars.$post-button-border-radius;
+
+            &:disabled {
+                pointer-events: none;
+                background-color: vars.$post-button-disabled-background;
+                opacity: 0.5;
+            }
+        }
+        .message-warning {
+            position: absolute;
+            color: vars.$message-warning-color;
+            margin: 0;
+            right: 40%;
+            font-weight: vars.$message-warning-font-weight;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .post-single-feed-wrapper {
+        width: auto;
+        .message-warning {
+            font-size: 12px;
+        }
+    }
+}
