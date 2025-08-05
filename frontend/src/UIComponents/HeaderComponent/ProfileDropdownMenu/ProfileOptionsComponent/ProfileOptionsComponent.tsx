@@ -95,10 +95,10 @@ const ProfileOptionsComponent: React.FC<{ closeModal: () => void }> = ({ closeMo
                     <span className="occupation-label">Occupation: </span>
                     <input
                         className="occupation-value"
+                        id="occupation"
                         type="text"
                         value={occupationValue}
                         onChange={handleOccupationValue}
-                        placeholder="Occupation"
                     />
                 </span>
             </div>

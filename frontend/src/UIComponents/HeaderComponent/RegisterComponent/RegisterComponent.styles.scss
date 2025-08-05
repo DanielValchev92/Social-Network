@@ -49,6 +49,7 @@
 
         .close-btn {
             background-color: transparent;
+            color: vars.$register-component-form-close-button-color;
             width: vars.$register-component-form-close-button-width;
             height: vars.$register-component-form-close-button-height;
             position: absolute;

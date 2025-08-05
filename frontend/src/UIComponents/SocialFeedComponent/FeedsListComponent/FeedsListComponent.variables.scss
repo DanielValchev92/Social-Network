@@ -30,7 +30,7 @@ $message-content-padding: 10px 20px;
 
 $message-see-more-less-button-background: transparent;
 $message-see-more-less-button-border: none;
-$message-see-more-less-button-color: #65676B;
+$message-see-more-less-button-color: rgba(240, 240, 245, 0.7);
 $message-see-more-less-button-font-size: 14px;
 $message-see-more-less-button-line-height: 20px;
 $message-see-more-less-button-font-weight: 500;
@@ -40,12 +40,10 @@ $likes-count-wrapper-img-width: 18px;
 $likes-count-wrapper-img-height: 18px;
 $likes-count-wrapper-span-font-size: 13px;
 $likes-count-wrapper-span-line-height: 21px;
-$likes-count-wrapper-span-color: #65676B;
+$likes-count-wrapper-span-color: rgba(240, 240, 245, 0.7);
 
 $engagement-buttons-wrapper-padding: 10px 20px;
 $engagement-buttons-wrapper-border-top: 1px solid rgba(255, 255, 255, 0.2);
-$like-button-active-width: 24px;
-$like-button-active-height: 24px;
 
-$share-message-text-margin: 0;
-$share-message-text-color: #FD7500;
+$like-button-fill-color: #f0f0f5;
+$like-button-active-fill-color: red;

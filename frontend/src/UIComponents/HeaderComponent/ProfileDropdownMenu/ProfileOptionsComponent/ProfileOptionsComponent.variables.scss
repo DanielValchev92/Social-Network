@@ -3,7 +3,7 @@ $profile-options-wrapper-overlay-height: 100%;
 $profile-options-wrapper-overlay-background: #0000004d;
 
 $profile-options-wrapper-padding: 30px;
-$profile-options-wrapper-background: #E0E0E0bf;
+$profile-options-wrapper-background: #002629;
 $profile-options-wrapper-border-radius: 6px;
 $profile-options-wrapper-border: 1px solid rgba(123, 124, 129, 0.2);
 
@@ -13,16 +13,23 @@ $profile-options-title-margin: 0 0 20px 0;
 $profile-options-wrapper-avatar-img-width: 50px;
 $profile-options-wrapper-avatar-img-height: 50px;
 $profile-options-wrapper-avatar-img-border-radius: 50px;
-$profile-options-wrapper-upload-button-background: #FD7500;
+$profile-options-wrapper-upload-button-background: #2cb67d;
 $profile-options-wrapper-upload-button-color: #E0E0E0;
 $profile-options-wrapper-upload-button-margin: 10px 0;
 
 $profile-options-wrapper-labels-font-size: 12px;
-$profile-options-wrapper-labels-color: #000000;
+$profile-options-wrapper-labels-color: rgba(255, 255, 255, 0.5);
 
 $profile-options-wrapper-occupation-input-font-size: 16px;
-$profile-options-wrapper-occupation-input-border: 1px solid rgba(123, 124, 129, 0.2);
 $profile-options-wrapper-occupation-input-border-radius: 6px;
+$profile-options-wrapper-occupation-label-color: #e0e0e0;
+$profile-options-wrapper-occupation-label-font-size: 10px;
+$profile-options-wrapper-occupation-value-width: 100%;
+$profile-options-wrapper-occupation-value-padding: 8px;
+$profile-options-wrapper-occupation-value-font-size: 16px;
+$profile-options-wrapper-occupation-value-border: 1px solid rgba(255, 255, 255, 0.5);
+$profile-options-wrapper-occupation-value-border-radius: 6px;
 
+$profile-options-wrapper-close-button-color: #e0e0e5;
 $profile-options-wrapper-close-button-width: 40px;
 $profile-options-wrapper-close-button-height: 40px;

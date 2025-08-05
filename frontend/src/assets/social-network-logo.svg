@@ -1,7 +1,12 @@
-
-<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="10" width="60" height="60" rx="12" fill="#123C39"/>
-  <text x="15" y="50" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="white">SN</text>
-  <text x="75" y="42" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#F0F0F0">social</text>
-  <text x="75" y="65" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#F0F0F0">network</text>
+<svg width="150" height="50" viewBox="0 0 150 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .sn-text { font-family: sans-serif; font-weight: bold; font-size: 24px; fill: #ffffff; }
+    .social-text { font-family: sans-serif; font-size: 16px; fill: #ffffff; }
+  </style>
+  
+  <rect x="0" y="0" width="50" height="50" rx="10" fill="#002629"/>
+  <text class="sn-text" x="25" y="32" text-anchor="middle">SN</text>
+  
+  <text class="social-text" x="60" y="20">social</text>
+  <text class="social-text" x="60" y="40">network</text>
 </svg>

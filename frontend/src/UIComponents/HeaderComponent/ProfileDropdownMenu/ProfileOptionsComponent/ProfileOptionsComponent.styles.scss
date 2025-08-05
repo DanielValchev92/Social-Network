@@ -63,10 +63,12 @@
 
             .user-names {
                 display: flex;
-                flex-direction: column;
+                justify-content: space-between;
 
                 .first-name-label,
                 .last-name-label {
+                    display: flex;
+                    flex-direction: column;
                     font-size: vars.$profile-options-wrapper-labels-font-size;
                 }
 
@@ -78,6 +80,8 @@
 
             .user-email,
             .user-occupation {
+                display: flex;
+                flex-direction: column;
 
                 .email-label,
                 .occupation-label {
@@ -91,14 +95,39 @@
 
                 .occupation-value {
                     font-size: vars.$profile-options-wrapper-occupation-input-font-size;
-                    border: vars.$profile-options-wrapper-occupation-input-border;
                     border-radius: vars.$profile-options-wrapper-occupation-input-border-radius;
+                }
+            }
+
+            .user-occupation {
+                position: relative;
+                top: 10px;
+
+                .occupation-label {
+                    position: absolute;
+                    top: 0;
+                    left: 8px;
+                    color: vars.$profile-options-wrapper-occupation-label-color;
+                    font-size: vars.$profile-options-wrapper-occupation-label-font-size;
+                    transform: translateY(-50%);
+                    transition: 0.2s ease all;
+                    pointer-events: none
+                }
+
+                .occupation-value {
+                    background: transparent;
+                    width: vars.$profile-options-wrapper-occupation-value-width;
+                    padding: vars.$profile-options-wrapper-occupation-value-padding;
+                    font-size: vars.$profile-options-wrapper-occupation-value-font-size;
+                    border: vars.$profile-options-wrapper-occupation-value-border;
+                    border-radius: vars.$profile-options-wrapper-occupation-value-border-radius;
                 }
             }
         }
 
         .close-btn {
             background-color: transparent;
+            color: vars.$profile-options-wrapper-close-button-color;
             width: vars.$profile-options-wrapper-close-button-width;
             height: vars.$profile-options-wrapper-close-button-height;
             position: absolute;

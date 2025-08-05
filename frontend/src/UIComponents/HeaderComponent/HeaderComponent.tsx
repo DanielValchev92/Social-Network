@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import type { RootState, AppDispatch } from "../../store/store";
-import logo from '../../assets/social-network-logo.png';
+import logo from '../../assets/social-network-logo.svg';
 import defaultProfileIcon from '../../assets/default-profile-icon.png';
 import './HeaderComponent.styles.scss';
 import RegisterComponent from "./RegisterComponent/RegisterComponent";
