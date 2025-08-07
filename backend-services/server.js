@@ -6,6 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const User = require('./models/User');
 const Message = require('./models/Message');
+const { chatBot } = require('./chatBot');
 
 dotenv.config();
 const app = express();
@@ -164,5 +165,31 @@ app.post('/messages/:id/like', async (req, res) => {
 
     } catch (err) {
         res.status(500).json({ message: 'Error', error: err.message })
+    }
+})
+
+//chatBot
+app.post('/chat', async (req, res) => {
+    try {
+        const { message } = req.body;
+
+        if (!message) {
+            return res.status(400).json({ error: 'Please type a message '});
+        }
+
+        const chatResponse = await chatBot(message);
+
+        res.json({ 
+            success: true,
+            response: chatResponse.text,
+            timestamp: new Date().toISOString()
+        })
+
+    } catch (error) {
+        console.error('Chat error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to process chat message'
+        });
     }
 })
